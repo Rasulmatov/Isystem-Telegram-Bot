@@ -18,7 +18,6 @@ public class KeyBoardButtonUserSetContact {
 
         KeyboardRow keyboardRow1=new KeyboardRow();
         KeyboardButton keyboardButton1=new KeyboardButton();
-
         keyboardButton1.setText("Share Contact \uD83D\uDCDE");
         keyboardButton1.setRequestContact(true);
 

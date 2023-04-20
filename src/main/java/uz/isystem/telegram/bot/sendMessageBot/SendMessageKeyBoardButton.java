@@ -1,15 +1,14 @@
 package uz.isystem.telegram.bot.sendMessageBot;
 
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import uz.isystem.telegram.bot.replayKeyMarkup.keyBoardButtonUser.KeyBoardButtonUserSetContact;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
 
 public class SendMessageKeyBoardButton {
-    private KeyBoardButtonUserSetContact keyBoardButtonUserSetContact=new KeyBoardButtonUserSetContact();
-    public SendMessage sendButton(Long chatId, String text){
+    public SendMessage sendButton(Long chatId,String text, ReplyKeyboardMarkup replyKeyboardMarkup){
         SendMessage sendMessage=new SendMessage();
         sendMessage.setText(text);
         sendMessage.setChatId(chatId);
-        sendMessage.setReplyMarkup(keyBoardButtonUserSetContact.setContact());
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
         return sendMessage;
     }
 }
